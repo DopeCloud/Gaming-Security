@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# scan.sh is a command which doesn't hurt your machine and so it's needed to run every minute!
+* * * * * /etc/scripts/scan.sh
+
+# on-boot.sh should run only on server boot..
+@reboot /etc/scripts/on-boot.sh
+
+# Antivirus Once per day!
+11 1 * * * /etc/scripts/antivirus.sh
